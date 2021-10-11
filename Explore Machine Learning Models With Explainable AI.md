@@ -37,25 +37,25 @@ limited_model.fit(limited_train_data, limited_train_labels, epochs=10, batch_siz
 
 <h1>Add WithConfigBuilder code</h1>
 
-
-config_builder = (WitConfigBuilder(
+//
+  config_builder = (WitConfigBuilder(
     
-   examples_for_wit[:num_datapoints],feature_names=column_names)
+    examples_for_wit[:num_datapoints],feature_names=column_names)
     
-   .set_custom_predict_fn(limited_custom_predict)
+    .set_custom_predict_fn(limited_custom_predict)
     
-   .set_target_feature('loan_granted')
+    .set_target_feature('loan_granted')
     
-   .set_label_vocab(['denied', 'accepted'])
+    .set_label_vocab(['denied', 'accepted'])
     
-   .set_compare_custom_predict_fn(custom_predict)
+    .set_compare_custom_predict_fn(custom_predict)
     
-   .set_model_name('limited')
+    .set_model_name('limited')
     
-   .set_compare_model_name('complete'))
+    .set_compare_model_name('complete'))
     
-WitWidget(config_builder, height=800)
-
+  WitWidget(config_builder, height=800)
+//
 
 -----
 Congratulations, you're all done with the lab 😄
