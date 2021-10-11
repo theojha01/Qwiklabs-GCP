@@ -37,7 +37,7 @@ limited_model.fit(limited_train_data, limited_train_labels, epochs=10, batch_siz
 
 <h1>Add WithConfigBuilder code</h1>
 
-<p>
+
 config_builder = (WitConfigBuilder(
     
     examples_for_wit[:num_datapoints],feature_names=column_names)
@@ -55,7 +55,7 @@ config_builder = (WitConfigBuilder(
     .set_compare_model_name('complete'))
     
 WitWidget(config_builder, height=800)
-</p>
+
 
 -----
 Congratulations, you're all done with the lab 😄
